@@ -10,7 +10,6 @@
     "lint": "prettier --write bin/**/*.js lib/**/*.js",
     "test": "echo \"Test!\""
   },
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kitsune7/ori.git"
