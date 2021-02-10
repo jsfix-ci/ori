@@ -1,11 +1,16 @@
 {
   "name": "ori",
-  "version": "1.0.0",
+  "version": "0.0.1-alpha",
   "description": "Personal cross-platform productivity tool",
-  "main": "index.js",
+  "bin": {
+    "ori": "./bin/index.js"
+  },
   "scripts": {
+    "start": "node bin/index.js",
+    "lint": "prettier --write bin/**/*.js lib/**/*.js",
     "test": "echo \"Test!\""
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kitsune7/ori.git"
@@ -18,5 +23,13 @@
   "bugs": {
     "url": "https://github.com/kitsune7/ori/issues"
   },
-  "homepage": "https://github.com/kitsune7/ori#readme"
+  "homepage": "https://github.com/kitsune7/ori#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "commander": "^7.0.0",
+    "shelljs": "^0.8.4"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
 }
