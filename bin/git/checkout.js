@@ -12,7 +12,7 @@ async function checkout() {
     .map((branch) => branch.trim());
   const currentBranch = branchOutputLines
     .find((branch) => branch.includes("*"))
-    ?.replace("* ", "");
+    .replace("* ", "");
 
   if (branchOutputLines.length === 1) {
     console.log(
@@ -28,7 +28,7 @@ async function checkout() {
   if (branches.length === 1) {
     checkoutBranch(branches[0]);
   } else {
-    const optOut = "Nevermind";
+    const optOut = colors.red("Nevermind");
     const questions = [
       {
         name: "branch",
