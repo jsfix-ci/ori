@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "description": "Personal cross-platform productivity tool",
   "bin": {
-    "ori": "bin/index.js"
+    "ori": "bin/ori"
   },
   "scripts": {
-    "start": "node bin/index.js",
+    "start": "node bin/ori",
     "reinstall": "npm remove ori && npm install -g ./",
     "lint": "prettier --write bin/**/*.js lib/**/*.js",
     "test": "echo \"Test!\"",
@@ -35,7 +35,7 @@
   "devDependencies": {
     "prettier": "^2.2.1"
   },
-  "main": "bin/index.js",
+  "main": "bin/ori",
   "directories": {
     "lib": "lib"
   }

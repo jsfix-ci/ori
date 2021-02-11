@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+const { Command } = require("commander");
+const { description, programName, version } = require("../lib/pkgInfo.js");
+
+const program = new Command();
+program
+  .version(version, "-v, --version")
+  .description(description)
+  .command("latest", `show the latest version of ${programName}`)
+  .command("update", `install the latest version of ${programName}`)
+  .command("git", `run a set of tools that help make git easier to work with`).alias('g')
+  .parse(process.argv);
