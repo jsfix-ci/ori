@@ -1,6 +1,6 @@
 {
   "name": "@happikitsune/ori",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1",
   "description": "Personal cross-platform productivity tool",
   "bin": {
     "ori": "bin/index.js"
