@@ -21,3 +21,4 @@ else
 fi
 
 nvm install lts/* --latest-npm
+npm install -g @happikitsune/ori
