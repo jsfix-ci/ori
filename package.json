@@ -10,7 +10,8 @@
     "reinstall": "npm remove ori && npm install -g ./",
     "lint": "prettier --write bin/**/*.js lib/**/*.js",
     "test": "echo \"Test!\"",
-    "preversion": "npm test"
+    "preversion": "npm test",
+    "postversion": "git push --follow-tags"
   },
   "repository": {
     "type": "git",
