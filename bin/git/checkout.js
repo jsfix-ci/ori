@@ -5,6 +5,7 @@ const { exec } = require("../../lib/shell.js");
 const { noop } = require("../../lib/utility.js");
 
 async function checkout() {
+  await exec("git fetch");
   const branchOutput = await exec("git branch -a", { silent: true });
   const branchOutputLines = branchOutput
     .split("\n")
