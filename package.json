@@ -1,6 +1,6 @@
 {
   "name": "@happikitsune/ori",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Personal cross-platform productivity tool",
   "bin": {
     "ori": "bin/ori"
