@@ -27,6 +27,7 @@ async function checkout() {
   if (branches.length === 1) {
     checkoutBranch(branches[0]);
   } else {
+    const optOut = "Nevermind";
     const questions = [
       {
         name: "branch",
@@ -34,18 +35,24 @@ async function checkout() {
         message: `You're currently on ${colors.yellow(
           currentBranch
         )}. Which branch do you want to checkout?`,
-        choices: branches,
+        choices: [...branches, optOut],
       },
     ];
     inquirer.prompt(questions).then((answers) => {
-      checkoutBranch(answers["branch"]);
+      const choice = answers["branch"];
+      if (choice === optOut) {
+        return;
+      }
+      checkoutBranch(choice);
     });
   }
 }
 
 function checkoutBranch(branchName) {
   const { branch, isRemote } = getBranchData(branchName);
-  exec(`git checkout ${isRemote ? "-track origin/" : ""}${branch}`).catch(noop);
+  exec(`git checkout ${isRemote ? "--track origin/" : ""}${branch}`).catch(
+    noop
+  );
 }
 
 function getBranchData(branch) {
