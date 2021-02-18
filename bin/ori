@@ -8,5 +8,6 @@ program
   .description(description)
   .command("latest", `show the latest version of ${programName}`)
   .command("update", `install the latest version of ${programName}`)
-  .command("git", `run a set of tools that help make git easier to work with`).alias('g')
+  .command("git", 'run a set of tools that help make git easier to work with').alias('g')
+  .command('install', 'install a program or a set of programs').alias('i')
   .parse(process.argv);
